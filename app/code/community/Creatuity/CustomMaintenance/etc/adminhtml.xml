@@ -1,0 +1,22 @@
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <creatuity_custommaintenance translate="title" module="creatuity_custommaintenance">
+                                        <title>Custom Maintenance</title>
+                                        <sort_order>30</sort_order>
+                                    </creatuity_custommaintenance>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

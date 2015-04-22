@@ -1,0 +1,344 @@
+<config>
+    <tabs>
+        <creatuity translate="label" module="creatuity_custommaintenance">
+            <label>Creatuity</label>
+            <sort_order>510</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+        </creatuity>
+    </tabs>
+    <sections>
+        <creatuity_custommaintenance translate="label" module="creatuity_custommaintenance">
+            <class>separator-top</class>
+            <label>Custom Maintenance</label>
+            <tab>creatuity</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>60</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <preview translate="label" module="creatuity_custommaintenance">
+                    <label>Preview page</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <preview translate="label">
+                            <label>Preview</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>creatuity_custommaintenance/adminhtml_system_config_form_preview_button</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </preview>
+                    </fields>                   
+                </preview> 
+                <general translate="label" module="creatuity_custommaintenance">
+                    <label>General</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <check translate="label">
+                            <label>Rebuild</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>creatuity_custommaintenance/adminhtml_system_config_form_button</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </check>
+                        <imagefield>
+                            <label>Logo</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir>errors/maintenance_creatuity_default/images</upload_dir> 
+                            <base_url type="web">errors/maintenance_creatuity_default/images</base_url> 
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </imagefield>
+                        <background_color>
+                            <label>Background Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color {required:false,hash:true}</validate>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <side_color>
+                            <label>Side Background Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color {required:false ,hash:true}</validate>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </side_color>
+                        <footer_header_color>
+                            <label>Footer and Header Background Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color {required:false,hash:true}</validate>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer_header_color>
+                        <title>
+                            <label>Title</label>
+                            <frontend_type>Text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <notification>
+                            <label>Notification text</label>
+                            <frontend_type>Textarea</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </notification>
+                        <copyright>
+                            <label>Copyright</label>
+                            <frontend_type>Textarea</frontend_type>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </copyright>
+                        <enable_toolitps>
+                            <label>Enable tooltips</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_toolitps>
+                        <email_tooltip>
+                            <label>Email tooltip text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>16</sort_order>
+                            <depends>
+                                <enable_toolitps>1</enable_toolitps>
+                            </depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email_tooltip>
+                        <phone_tooltip>
+                            <label>Phone tooltip text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>17</sort_order>
+                            <depends>
+                                <enable_toolitps>1</enable_toolitps>
+                            </depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </phone_tooltip>
+                        <counter_animation>
+                            <label>Counter animation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </counter_animation>
+                        <title_animation>
+                            <label>Title animation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title_animation>
+                    </fields>
+                </general> 
+                <contact translate="label" module="creatuity_custommaintenance">
+                    <label>Contact on Maintenance Page</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <email_address translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Email contact address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-email</validate>
+                        </email_address>
+                        <phone_number translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Phone number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-phone</validate>
+                        </phone_number>
+                    </fields>                   
+                </contact> 
+                <social_media translate="label" module="creatuity_custommaintenance">
+                    <label>Social Media</label>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <rotating_icons translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Rotating Social Media Icons</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </rotating_icons>
+                        <enable_facebook translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Facebook</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_facebook>
+                        <facebook_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Facebook page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_facebook>1</enable_facebook>
+                            </depends>
+                        </facebook_page>
+                        <enable_twitter translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Twitter</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_twitter>
+                        <twitter_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Twitter page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-url</validate>
+                            <depends>
+                                <enable_twitter>1</enable_twitter>
+                            </depends>
+                        </twitter_page>
+                        <enable_youtube translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Youtube</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_youtube>
+                        <youtube_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Youtube page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_youtube>1</enable_youtube>
+                            </depends>
+                        </youtube_page>
+                        <enable_google translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Google+</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_google>
+                        <google_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Google+ page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_google>1</enable_google>
+                            </depends>
+                        </google_page>
+                        <enable_instagram translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Instagram</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_instagram>
+                        <instagram_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Instagram page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>62</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_instagram>1</enable_instagram>
+                            </depends>
+                        </instagram_page>
+                        <enable_pinterest translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Enable Pinterest</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>71</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_pinterest>
+                        <pinterest_page translate="label tooltip" module="creatuity_custommaintenance">
+                            <label>Pinterest page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>72</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_pinterest>1</enable_pinterest>
+                            </depends>
+                        </pinterest_page>
+                    </fields>                        
+                </social_media>              
+            </groups>
+        </creatuity_custommaintenance>
+    </sections>
+</config>
