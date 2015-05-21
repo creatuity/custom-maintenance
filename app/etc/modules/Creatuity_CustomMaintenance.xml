@@ -1,0 +1,10 @@
+<config>
+  <modules>
+    <Creatuity_CustomMaintenance>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Creatuity_CustomMaintenance>
+  </modules>
+</config>
+
+

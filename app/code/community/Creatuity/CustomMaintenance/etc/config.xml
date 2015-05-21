@@ -1,0 +1,118 @@
+<config>
+    <modules>
+        <Creatuity_CustomMaintenance>
+            <version>0.0.1</version>
+        </Creatuity_CustomMaintenance>
+    </modules>
+    <global>
+        <blocks>
+            <creatuity_custommaintenance>
+                <class>Creatuity_CustomMaintenance_Block</class>
+            </creatuity_custommaintenance>       
+        </blocks>
+        <helpers>
+            <creatuity_custommaintenance>
+                <class>Creatuity_CustomMaintenance_Helper</class>
+            </creatuity_custommaintenance>
+        </helpers>
+        <models>
+            <creatuity_custommaintenance>
+                <class>Creatuity_CustomMaintenance_Model</class>
+            </creatuity_custommaintenance>
+        </models>
+        <resources>
+            <creauity_custommaintanance_setup>
+                <setup>
+                    <module>Creatuity_CustomMaintenance</module>
+                </setup>
+            </creauity_custommaintanance_setup>
+        </resources> 
+        <events>
+            <admin_system_config_changed_section_creatuity_custommaintenance>
+                <observers>
+                    <Creatuity_CustomMaintenance>
+                        <type>singleton</type>
+                        <class>creatuity_custommaintenance/maintenance_observer</class>
+                        <method>onConfigSave</method>
+                    </Creatuity_CustomMaintenance>
+                </observers>
+            </admin_system_config_changed_section_creatuity_custommaintenance>
+            <store_add>
+                <observers>
+                    <Creatuity_CustomMaintenance>
+                        <type>singleton</type>
+                        <class>creatuity_custommaintenance/maintenance_observer</class>
+                        <method>rebuildStore</method>
+                    </Creatuity_CustomMaintenance>
+                </observers>
+            </store_add>
+            <store_delete>
+                <observers>
+                    <Creatuity_CustomMaintenance>
+                        <type>singleton</type>
+                        <class>creatuity_custommaintenance/maintenance_observer</class>
+                        <method>removeStore</method>
+                    </Creatuity_CustomMaintenance>
+                </observers>
+            </store_delete>
+            <store_edit>
+                <observers>
+                    <Creatuity_CustomMaintenance>
+                        <type>singleton</type>
+                        <class>creatuity_custommaintenance/maintenance_observer</class>
+                        <method>rebuildStore</method>
+                    </Creatuity_CustomMaintenance>
+                </observers>
+            </store_edit>
+        </events>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <creatuity_custommaintenance>
+                    <file>custommaintenance.xml</file>
+                </creatuity_custommaintenance>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <creatuity_custommaintenance after="Mage_Adminhtml">Creatuity_CustomMaintenance</creatuity_custommaintenance>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <creatuity_custommaintenance>
+            <general>
+                <background_color>#FFFFFE</background_color>
+                <side_color>#FFFFFE</side_color>
+                <footer_header_color>#343F53</footer_header_color>
+                <copyright>Magento is a trademark of Magento Inc. Copyright &amp;copy; 2014 Magento Inc.</copyright>
+                <phone_tooltip>Call us!</phone_tooltip>
+                <email_tooltip>Email us!</email_tooltip>
+                <notification>The server is temporarily unable to service your request due to maintenance downtime or capacity problems. We will be back soon.</notification>
+                <title>We will be back soon</title>
+                <imagefield>logo.png</imagefield>
+            </general>
+        </creatuity_custommaintenance>
+    </default>
+    <frontend>
+        <routers>
+            <custommaintenance>
+                <use>standard</use>
+                <args>
+                    <module>Creatuity_CustomMaintenance</module>
+                    <frontName>custommaintenance</frontName>
+                </args>
+            </custommaintenance>
+        </routers>
+    </frontend>
+</config>
+
+
+
