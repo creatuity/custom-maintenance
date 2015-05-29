@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title><?php echo $this->pageTitle ?></title>
+        <meta http-equiv="refresh" content="120" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="robots" content="*" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+        <link rel="stylesheet" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>errors/maintenance_creatuity_default/css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>errors/maintenance_creatuity_default/css/font-awesome.min.css"/>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <script src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>errors/maintenance_creatuity_default/js/countdown.js"></script>
+    </head>
+    <body <?php if ($this->getFooterAndHeaderBackgroundColor()):?><?php echo "style=" . "\"background:" . $this->getFooterAndHeaderBackgroundColor() . "\"" ?><?php endif;?>>
+        <div class="wrapper">
+            <div class="page">
+                <div class="header-container">
+                    <div class="header">
+                    </div>
+                </div>
+                <div class="main-container" <?php if ($this->getSideBackgroundColor()):?><?php echo "style=" . "\"background:" . $this->getSideBackgroundColor() . "\"" ?><?php endif;?>>
+                    <div class="main col1-layout" <?php if ($this->getBakcgroundColor()):?><?php echo "style=" . "\"background:" . $this->getBakcgroundColor() . "\"" ?><?php endif;?>>
+                        <div id="main" class="col-main">
+                            <div class="logo-container">
+                                <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>" title="Magento Commerce" class="logo"><img src="/errors/maintenance_creatuity_default/images/<?php echo $this->getLogo() ?>" alt="Magento Commerce" /></a>
+                            </div>
+                            <?php if ($this->getTitle()): ?>
+                                <div class="page-title <?php if ($this->isTitleAnimationEnabled()):?><?php echo ' top-down-animation' ?><?php endif;?>">
+                                    <h1><?php echo $this->getTitle() ?></h1>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($this->getNotification()): ?>
+                                <p><?php echo $this->getNotification() ?></p>
+                            <?php endif; ?>
+                            <div class="counter<?php if ($this->isCounterAnimationEnabled()):?><?php echo ' animation' ?><?php endif;?>">
+                                <script src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>errors/countdown-data.php" type="text/javascript"></script>
+                            </div>
+                            <?php if ($this->getEmailContactAddress()): ?>
+                                <div class="contact-us">
+                                    <?php if ($this->areTooltipsEnabled() && $this->getEmailTooltip()): ?>
+                                        <div class="tooltip"><?php echo $this->getEmailTooltip() ?></div>
+                                    <?php endif; ?>
+                                    <i class="fa fa-envelope"></i> <a href="mailto:<?php echo $this->getEmailContactAddress() ?>"><?php echo $this->getEmailContactAddress() ?></a>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($this->getPhoneNumber()): ?>
+                                <div class="call-us">
+                                    <?php if ($this->areTooltipsEnabled() && $this->getPhoneTooltip()): ?>
+                                        <div class="tooltip"><?php echo $this->getPhoneTooltip() ?></div>
+                                    <?php endif; ?>
+                                    <i class="fa fa-phone"></i><a href="tel:<?php echo $this->getPhoneNumber() ?>"><?php echo $this->getPhoneNumber() ?></a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="social-media<?php if ($this->RotatatingIconsEnabled()):?><?php echo ' rotating' ?><?php endif; ?>">
+                            <ul class="sharing-links"> 
+                                <?php if ($this->isFacebookEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getFacebookPageUrl() ?>" target="_blank" title="Facebook" class="link-facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ($this->isYoutubeEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getYoutubePageUrl() ?>" target="_blank" title="Youtube" class="link-youtube">
+                                            <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ($this->isTwitterEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getTwitterPageUrl() ?>" target="_blank" title="Twitter" class="link-twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ($this->isGoogleEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getGooglePageUrl() ?>" target="_blank" title="Google" class="link-google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ($this->isInstagramEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getInstagramPageUrl() ?>" target="_blank" title="Instagram" class="link-instagram">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>  
+                                <?php if ($this->isPinterestEnabled()): ?>
+                                    <li>  
+                                        <a href="<?php echo $this->getPinterestPageUrl() ?>" target="_blank" title="Pinterest" class="link-pinterest">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                        <?php if ($this->getCopyright()): ?>
+                            <address class="copyright"><?php echo $this->getCopyright() ?></address>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
