@@ -25,7 +25,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         return $this->_generateTemplate($store);
     }
 
-    public function rebuildSingleStore($storeCode) {
+    public function rebuildSingleStore($storeCode)
+    {
         $this->_savetoFile($storeCode, $this->_getWebsiteByStoreCode($storeCode),
         $this->templateFileName, $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
     }

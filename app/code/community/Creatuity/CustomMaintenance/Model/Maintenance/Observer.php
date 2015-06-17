@@ -7,9 +7,11 @@
  * @copyright  Copyright (c) 2008-2014 Creatuity Corp. (http://www.creatuity.com)
  * @license    http://creatuity.com/license
  */
-class Creatuity_CustomMaintenance_Model_Maintenance_Observer {
+class Creatuity_CustomMaintenance_Model_Maintenance_Observer
+{
 
-    public function onConfigSave() {
+    public function onConfigSave()
+    {
         try {
             $model = Mage::getModel('creatuity_custommaintenance/maintenance_maintenance');
             $model->rebuild();
@@ -20,7 +22,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Observer {
         }
     }
 
-    public function removeStore($observer) {
+    public function removeStore($observer)
+    {
         try {
             $store = $observer->getEvent()->getStore();
             $model = Mage::getModel('creatuity_custommaintenance/maintenance_maintenance');
@@ -32,12 +35,12 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Observer {
         }
     }
 
-    public function rebuildStore($observer) {
+    public function rebuildStore($observer)
+    {
         try {
             $model = Mage::getModel('creatuity_custommaintenance/maintenance_maintenance');
             $store = $observer->getEvent()->getStore();
-            $model->removeErrorPage($store->getOrigData('code'),
-                    Mage::app()->getWebsite($store->getOrigData('website_id'))->getCode());
+            $model->removeErrorPage($store->getOrigData('code'), Mage::app()->getWebsite($store->getOrigData('website_id'))->getCode());
             $model->rebuildSingleStore($store->getCode(), $store->getWebsite()->getCode());
         } catch (Exception $e) {
             $this->_processError("Uknwown problem with rebuilding maintenance views", $e);
@@ -46,7 +49,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Observer {
         }
     }
 
-    protected function _processError($message, Exception $e) {
+    protected function _processError($message, Exception $e)
+    {
         Mage::log($e);
         Mage::getSingleton('adminhtml/session')->addSuccess($message);
     }
