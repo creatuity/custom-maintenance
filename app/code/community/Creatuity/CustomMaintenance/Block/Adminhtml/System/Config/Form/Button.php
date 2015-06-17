@@ -1,13 +1,5 @@
 <?php
 
-/**
- * [DESCRIPTION OF A FILE]
- *
- * @category   Creatuity
- * @package    magento-theme
- * @copyright  Copyright (c) 2008-2014 Creatuity Corp. (http://www.creatuity.com)
- * @license    http://creatuity.com/license/
- */
 class Creatuity_CustomMaintenance_Block_Adminhtml_System_Config_Form_Button extends Mage_Adminhtml_Block_System_Config_Form_Field
 {
 

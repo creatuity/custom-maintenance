@@ -1,12 +1,5 @@
 <?php
 
-/**
- *
- * @category   Creatuity
- * @package    magento-theme
- * @copyright  Copyright (c) 2008-2014 Creatuity Corp. (http://www.creatuity.com)
- * @license    http://creatuity.com/license
- */
 class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block_Template
 {
 

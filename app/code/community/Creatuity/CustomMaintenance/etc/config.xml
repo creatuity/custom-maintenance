@@ -20,13 +20,6 @@
                 <class>Creatuity_CustomMaintenance_Model</class>
             </creatuity_custommaintenance>
         </models>
-        <resources>
-            <creauity_custommaintanance_setup>
-                <setup>
-                    <module>Creatuity_CustomMaintenance</module>
-                </setup>
-            </creauity_custommaintanance_setup>
-        </resources> 
         <events>
             <admin_system_config_changed_section_creatuity_custommaintenance>
                 <observers>
