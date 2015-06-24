@@ -1,12 +1,5 @@
 <?php
 
-/**
- *
- * @category   Creatuity
- * @package    magento-theme
- * @copyright  Copyright (c) 2008-2014 Creatuity Corp. (http://www.creatuity.com)
- * @license    http://creatuity.com/license
- */
 class MaintenanceException extends Exception {
     
 }
@@ -25,7 +18,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         return $this->_generateTemplate($store);
     }
 
-    public function rebuildSingleStore($storeCode) {
+    public function rebuildSingleStore($storeCode)
+    {
         $this->_savetoFile($storeCode, $this->_getWebsiteByStoreCode($storeCode),
         $this->templateFileName, $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
     }

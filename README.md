@@ -1,6 +1,8 @@
 # custom-maintenance
 Custom Maintenance Page
 
+Full documentation is aviable under -> app/code/community/doc/custom\_maintenance_documentation.pdf
+
 ## Custom Maintenance Page Details
 This feature allows you to customize maintenace page view. Thanks to this feature your page can have maintenance page that is fully responsive, configurable and easy to change!
 
@@ -34,3 +36,4 @@ This feature allows you to customize maintenace page view. Thanks to this featur
 
 ## Preview
 You can always preview how your maintanance page will look like for particular store by clicking on Preview button. Remember to save config at first! Preview button is visible only on store view level.
+

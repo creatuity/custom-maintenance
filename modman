@@ -1,0 +1,12 @@
+app/etc/modules/Creatuity_CustomMaintenance.xml
+app/design/adminhtml/default/default/template/creatuity/system/
+app/design/adminhtml/default/default/layout/custommaintenance.xml
+app/design/frontend/base/default/template/maintenance
+app/code/community/Creatuity/CustomMaintenance/
+js/creatuity/
+errors/503.php
+errors/503.original.php
+errors/countdown-data.php
+errors/countdown_processor.php
+errors/creatuity_processor.php
+errors/maintenance_creatuity_default/
