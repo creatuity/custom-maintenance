@@ -24,10 +24,10 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         return $logo;
     }
 
-    public function getBakcgroundColor()
+    public function getBackgroundColor()
     {
         $color = Mage::helper('creatuity_custommaintenance/data')
-                ->getBakcgroundColor($this->_storeId);
+                ->getBackgroundColor($this->_storeId);
 
         return (string) $color;
     }
