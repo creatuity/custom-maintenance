@@ -8,7 +8,7 @@ class Creatuity_CustomMaintenance_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->getConfig('imagefield', $storeId);
     }
 
-    public function getBakcgroundColor($storeId = null)
+    public function getBackgroundColor($storeId = null)
     {
         return $this->getConfig('background_color', $storeId);
     }
