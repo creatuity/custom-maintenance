@@ -162,7 +162,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
                         ->isFacebookEnabled($this->_storeId);
     }
 
-    public function getfacebookPageUrl()
+    public function getFacebookPageUrl()
     {
         $url = Mage::helper('creatuity_custommaintenance/data')
                 ->getFacebookPageUrl($this->_storeId);
