@@ -96,7 +96,7 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
 
         foreach ($files as $file) {
             if (is_dir($dir . DS . $file) && !is_link($dir)) {
-                delTree($dir . DS . $file);
+                $this->_deleteTreeDirectory($dir . DS . $file);
             } else {
                 unlink($dir . DS . $file);
             }
