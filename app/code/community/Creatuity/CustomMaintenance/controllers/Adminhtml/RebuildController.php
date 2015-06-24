@@ -18,7 +18,7 @@ class Creatuity_CustomMaintenance_Adminhtml_RebuildController extends Mage_Admin
     protected function _processError($message, Exception $e)
     {
         Mage::log($e);
-        Mage::getSingleton('adminhtml/session')->addSuccess($message);
+        Mage::getSingleton('adminhtml/session')->addError($message);
     }
 
 }
