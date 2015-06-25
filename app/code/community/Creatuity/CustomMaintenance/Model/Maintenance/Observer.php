@@ -45,7 +45,7 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Observer
     protected function _processError($message, Exception $e)
     {
         Mage::log($e);
-        Mage::getSingleton('adminhtml/session')->addSuccess($message);
+        Mage::getSingleton('adminhtml/session')->addError($message);
     }
 
 }
