@@ -1,7 +1,7 @@
 # custom-maintenance
 Custom Maintenance Page
 
-Full documentation is aviable under -> app/code/community/doc/custom\_maintenance_documentation.pdf
+Full documentation is aviable under -> app/code/community/Creatuity/CustomMaintanance/doc/custom\_maintenance_documentation.pdf
 
 ## Custom Maintenance Page Details
 This feature allows you to customize maintenace page view. Thanks to this feature your page can have maintenance page that is fully responsive, configurable and easy to change!
