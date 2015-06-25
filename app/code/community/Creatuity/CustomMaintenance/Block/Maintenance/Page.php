@@ -24,12 +24,12 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         return $logo;
     }
 
-    public function getBakcgroundColor()
+    public function getBackgroundColor()
     {
         $color = Mage::helper('creatuity_custommaintenance/data')
-                ->getBakcgroundColor($this->_storeId);
+                ->getBackgroundColor($this->_storeId);
 
-        (string) $color;
+        return (string) $color;
     }
 
     public function getSideBackgroundColor()
@@ -162,7 +162,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
                         ->isFacebookEnabled($this->_storeId);
     }
 
-    public function getfacebookPageUrl()
+    public function getFacebookPageUrl()
     {
         $url = Mage::helper('creatuity_custommaintenance/data')
                 ->getFacebookPageUrl($this->_storeId);
