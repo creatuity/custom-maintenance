@@ -21,6 +21,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
     {
         $logo = Mage::helper('creatuity_custommaintenance')
                 ->getLogoUrl($this->_storeId);
+
         return $logo;
     }
 

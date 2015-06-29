@@ -24,7 +24,10 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
 
     public function rebuildSingleStore($storeCode)
     {
-        $this->_savetoFile($storeCode, $this->_getWebsiteByStoreCode($storeCode), $this->templateFileName, $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
+        $this->_savetoFile($storeCode,
+                $this->_getWebsiteByStoreCode($storeCode),
+                $this->templateFileName,
+                $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
     }
 
     public function removeErrorPage($storeCode, $websiteCode)
@@ -35,7 +38,9 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
     protected function _generateAllTemplates()
     {
         foreach ($this->_getStores() as $store) {
-            $this->_savetoFile($store->getCode(), $store->getWebsite()->getCode(), $this->templateFileName, $this->_generateTemplate(Mage::app()->getStore($store->getCode())->getId()));
+            $this->_savetoFile($store->getCode(),
+                    $store->getWebsite()->getCode(), $this->templateFileName,
+                    $this->_generateTemplate(Mage::app()->getStore($store->getCode())->getId()));
         }
     }
 
@@ -43,7 +48,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
     {
         $stores = $this->_getStores();
         foreach ($stores as $store) {
-            $this->removePageDirectoryIfExists($store->getCode(), $store->getWebsite()->getCode());
+            $this->removePageDirectoryIfExists($store->getCode(),
+                    $store->getWebsite()->getCode());
         }
     }
 
@@ -75,7 +81,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
             }
         }
 
-        $this->_saveContentToFile($filePath, "<?php return " . var_export($stores, true) . ";");
+        $this->_saveContentToFile($filePath,
+                "<?php return " . var_export($stores, true) . ";");
     }
 
     public function removePageDirectoryIfExists($storeCode, $websiteCode)
@@ -83,15 +90,12 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
         $this->_removePageDirectory($storeCode, $websiteCode, false);
     }
 
-    protected function _removePageDirectory($storeCode, $websiteCode, $mustExists = true)
+    protected function _removePageDirectory($storeCode, $websiteCode,
+            $mustExists = true)
     {
         $pageDirectory = $this->_getPageDirectory($storeCode, $websiteCode);
 
         $isExist = is_dir($pageDirectory) && file_exists($pageDirectory);
-
-        if (!is_writable($pageDirectory)) {
-            throw new MaintenanceException("'{$pageDirectory}' directory is not writable");
-        }
 
         if (!$mustExists && !$isExist) {
             return;
@@ -121,7 +125,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
         }
     }
 
-    protected function _savetoFile($storeCode, $websiteCode, $fileName, $fileContent)
+    protected function _savetoFile($storeCode, $websiteCode, $fileName,
+            $fileContent)
     {
         $this->_ensurePageDirectoryExists($storeCode, $websiteCode);
 
