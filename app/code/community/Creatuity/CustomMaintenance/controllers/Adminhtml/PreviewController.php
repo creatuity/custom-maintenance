@@ -7,7 +7,8 @@ class Creatuity_CustomMaintenance_Adminhtml_PreviewController extends Mage_Admin
     {
         $block = $this->getLayout()
                         ->createBlock('creatuity_custommaintenance/maintenance_page')
-                        ->setData('storeId', $this->getRequest()->getParam('storeId'))->setArea('frontend');
+                        ->setData('storeId',
+                                $this->getRequest()->getParam('storeId'))->setArea('frontend');
         $this->getResponse()->setBody($block->toHtml());
     }
 

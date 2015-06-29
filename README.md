@@ -37,3 +37,12 @@ This feature allows you to customize maintenace page view. Thanks to this featur
 ## Preview
 You can always preview how your maintanance page will look like for particular store by clicking on Preview button. Remember to save config at first! Preview button is visible only on store view level.
 
+## Google Analytics support
+Right now you are able to track how long maintenance mode has been active and how many people saw it! You just have to perform these steps:
+
+1. set Google Analytics Tag (Page Title) in module configuration : 
+ * System -> Configuration -> Creatuity -> Custom Maintenance -> Google Analytics Tag (Page Title)
+2. set google Analytics account in Magento configuration: 
+ * System -> Configuration -> Sales -> Google Api -> Enabled : YES
+ * System -> Configuration -> Sales -> Google Api -> Enabled : Your google Analytics Id
+3. rebuild creatuity's maintenance configuration 
