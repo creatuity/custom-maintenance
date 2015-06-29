@@ -54,13 +54,21 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                         </check>
+			<ga_tag>
+                            <label>Google Analytics Tag (Page Title)</label>
+                            <frontend_type>Text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ga_tag>
                         <imagefield>
-                            <label>Logo</label>
+                            <label>Logo image</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir>errors/maintenance_creatuity_default/images</upload_dir> 
                             <base_url type="web">errors/maintenance_creatuity_default/images</base_url> 
-                            <sort_order>10</sort_order>
+                            <sort_order>11</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -69,7 +77,7 @@
                             <label>Background Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color {required:false,hash:true}</validate>
-                            <sort_order>11</sort_order>
+                            <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -78,7 +86,7 @@
                             <label>Side Background Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color {required:false ,hash:true}</validate>
-                            <sort_order>11</sort_order>
+                            <sort_order>13</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -87,7 +95,7 @@
                             <label>Footer and Header Background Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color {required:false,hash:true}</validate>
-                            <sort_order>11</sort_order>
+                            <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -95,7 +103,7 @@
                         <title>
                             <label>Title</label>
                             <frontend_type>Text</frontend_type>
-                            <sort_order>12</sort_order>
+                            <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -103,7 +111,7 @@
                         <notification>
                             <label>Notification text</label>
                             <frontend_type>Textarea</frontend_type>
-                            <sort_order>13</sort_order>
+                            <sort_order>16</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -111,7 +119,7 @@
                         <copyright>
                             <label>Copyright</label>
                             <frontend_type>Textarea</frontend_type>
-                            <sort_order>14</sort_order>
+                            <sort_order>17</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -120,7 +128,7 @@
                             <label>Enable tooltips</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>15</sort_order>
+                            <sort_order>18</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -128,7 +136,7 @@
                         <email_tooltip>
                             <label>Email tooltip text</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>16</sort_order>
+                            <sort_order>19</sort_order>
                             <depends>
                                 <enable_toolitps>1</enable_toolitps>
                             </depends>
@@ -139,7 +147,7 @@
                         <phone_tooltip>
                             <label>Phone tooltip text</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>17</sort_order>
+                            <sort_order>20</sort_order>
                             <depends>
                                 <enable_toolitps>1</enable_toolitps>
                             </depends>
@@ -148,19 +156,19 @@
                             <show_in_store>1</show_in_store>
                         </phone_tooltip>
                         <counter_animation>
-                            <label>Counter animation</label>
+                            <label>Enable counter animation</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>18</sort_order>
+                            <sort_order>21</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </counter_animation>
                         <title_animation>
-                            <label>Title animation</label>
+                            <label>Enable title animation</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>19</sort_order>
+                            <sort_order>22</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>

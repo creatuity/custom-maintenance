@@ -1,48 +1,60 @@
 <?php
 
-class MaintenanceException extends Exception {
+class MaintenanceException extends Exception
+{
     
 }
 
-class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
+class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance
+{
 
     protected $templateFileName = 'maintenance_page.phtml';
 
-    public function rebuild() {
+    public function rebuild()
+    {
         $this->_removeAllPageDirectories();
         $this->_generateMagentoStoresConfigFile();
         $this->_generateAllTemplates();
     }
 
-    public function generateTemplate($store) {
+    public function generateTemplate($store)
+    {
         return $this->_generateTemplate($store);
     }
 
     public function rebuildSingleStore($storeCode)
     {
-        $this->_savetoFile($storeCode, $this->_getWebsiteByStoreCode($storeCode),
-        $this->templateFileName, $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
+        $this->_savetoFile($storeCode,
+                $this->_getWebsiteByStoreCode($storeCode),
+                $this->templateFileName,
+                $this->_generateTemplate(Mage::app()->getStore($storeCode)->getId()));
     }
 
-    public function removeErrorPage($storeCode, $websiteCode) {
+    public function removeErrorPage($storeCode, $websiteCode)
+    {
         $this->removePageDirectoryIfExists($storeCode, $websiteCode, false);
     }
 
-    protected function _generateAllTemplates() {
+    protected function _generateAllTemplates()
+    {
         foreach ($this->_getStores() as $store) {
-            $this->_savetoFile($store->getCode(), $store->getWebsite()->getCode(), $this->templateFileName,
-            $this->_generateTemplate(Mage::app()->getStore($store->getCode())->getId()));
+            $this->_savetoFile($store->getCode(),
+                    $store->getWebsite()->getCode(), $this->templateFileName,
+                    $this->_generateTemplate(Mage::app()->getStore($store->getCode())->getId()));
         }
     }
 
-    protected function _removeAllPageDirectories() {
+    protected function _removeAllPageDirectories()
+    {
         $stores = $this->_getStores();
         foreach ($stores as $store) {
-            $this->removePageDirectoryIfExists($store->getCode(), $store->getWebsite()->getCode());
+            $this->removePageDirectoryIfExists($store->getCode(),
+                    $store->getWebsite()->getCode());
         }
     }
 
-    protected function _generateTemplate($storeId) {
+    protected function _generateTemplate($storeId)
+    {
         return Mage::app()
                         ->getLayout()
                         ->createBlock('creatuity_custommaintenance/maintenance_page')
@@ -51,7 +63,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
                         ->toHtml();
     }
 
-    protected function _generateMagentoStoresConfigFile() {
+    protected function _generateMagentoStoresConfigFile()
+    {
         $stores = array();
 
         $filePath = Mage::getBaseDir() . DS .
@@ -68,14 +81,18 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
             }
         }
 
-        $this->_saveContentToFile($filePath, "<?php return " . var_export($stores, true) . ";");
+        $this->_saveContentToFile($filePath,
+                "<?php return " . var_export($stores, true) . ";");
     }
 
-    public function removePageDirectoryIfExists($storeCode, $websiteCode) {
+    public function removePageDirectoryIfExists($storeCode, $websiteCode)
+    {
         $this->_removePageDirectory($storeCode, $websiteCode, false);
     }
 
-    protected function _removePageDirectory($storeCode, $websiteCode, $mustExists = true) {
+    protected function _removePageDirectory($storeCode, $websiteCode,
+            $mustExists = true)
+    {
         $pageDirectory = $this->_getPageDirectory($storeCode, $websiteCode);
 
         $isExist = is_dir($pageDirectory) && file_exists($pageDirectory);
@@ -91,7 +108,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         $this->_deleteTreeDirectory($pageDirectory);
     }
 
-    protected function _deleteTreeDirectory($dir) {
+    protected function _deleteTreeDirectory($dir)
+    {
         $files = array_diff(scandir($dir), array('.', '..'));
 
         foreach ($files as $file) {
@@ -107,7 +125,9 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         }
     }
 
-    protected function _savetoFile($storeCode, $websiteCode, $fileName, $fileContent) {
+    protected function _savetoFile($storeCode, $websiteCode, $fileName,
+            $fileContent)
+    {
         $this->_ensurePageDirectoryExists($storeCode, $websiteCode);
 
         $filePath = $this->_getPageFile($storeCode, $websiteCode, $fileName);
@@ -115,7 +135,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         $this->_saveContentToFile($filePath, $fileContent);
     }
 
-    protected function _saveContentToFile($filePath, $content) {
+    protected function _saveContentToFile($filePath, $content)
+    {
         $fp = fopen($filePath, 'w+');
 
         if (!$fp) {
@@ -134,7 +155,8 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         }
     }
 
-    protected function _ensurePageDirectoryExists($storeCode, $websiteCode) {
+    protected function _ensurePageDirectoryExists($storeCode, $websiteCode)
+    {
         $pageDirectory = $this->_getPageDirectory($storeCode, $websiteCode);
         if (!is_dir($pageDirectory)) {
             mkdir($pageDirectory, 0777, true);
@@ -144,21 +166,25 @@ class Creatuity_CustomMaintenance_Model_Maintenance_Maintenance {
         }
     }
 
-    protected function _getPageFile($storeCode, $websiteCode, $fileName) {
+    protected function _getPageFile($storeCode, $websiteCode, $fileName)
+    {
         return $this->_getPageDirectory($storeCode, $websiteCode) . DS . $fileName;
     }
 
-    protected function _getPageDirectory($storeCode, $websiteCode) {
+    protected function _getPageDirectory($storeCode, $websiteCode)
+    {
         return Mage::getBaseDir() . DS .
                 'errors' . DS .
                 'maintenance_' . $websiteCode . '_' . $storeCode;
     }
 
-    protected function _getStores() {
+    protected function _getStores()
+    {
         return Mage::app()->getStores();
     }
 
-    protected function _getWebsiteByStoreCode($storeCode) {
+    protected function _getWebsiteByStoreCode($storeCode)
+    {
         return Mage::app()->getStore($storeCode)->getWebsite()->getCode();
     }
 

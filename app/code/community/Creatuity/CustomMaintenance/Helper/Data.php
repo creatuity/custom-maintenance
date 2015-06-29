@@ -10,17 +10,17 @@ class Creatuity_CustomMaintenance_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getBackgroundColor($storeId = null)
     {
-        return $this->getConfig('background_color', $storeId);
+        return (string) $this->getConfig('background_color', $storeId);
     }
 
     public function getSideColor($storeId = null)
     {
-        return $this->getConfig('side_color', $storeId);
+        return (string) $this->getConfig('side_color', $storeId);
     }
 
     public function getFooterAndHeaderColor($storeId = null)
     {
-        return $this->getConfig('footer_header_color', $storeId);
+        return (string) $this->getConfig('footer_header_color', $storeId);
     }
 
     public function getTitle($storeId = null)
@@ -73,7 +73,7 @@ class Creatuity_CustomMaintenance_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->getConfig('email_tooltip', $storeId);
     }
 
-    public function RotatatingIconsEnabled($storeId = null)
+    public function rotatatingIconsEnabled($storeId = null)
     {
         return $this->getSocialMediaConfig('rotating_icons', $storeId);
     }
@@ -154,6 +154,11 @@ class Creatuity_CustomMaintenance_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $path = 'creatuity_custommaintenance/social_media/' . $key;
         return Mage::getStoreConfig($path, $storeId);
+    }
+
+    public function getCustomGoogleTag($storeId = null)
+    {
+        return $this->getConfig('ga_tag', $storeId);
     }
 
 }

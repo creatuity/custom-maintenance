@@ -21,7 +21,8 @@ class Creatuity_CustomMaintenance_Block_Adminhtml_System_Config_Form_Preview_But
             'id' => 'preview_button',
             'label' => $this->helper('adminhtml')->__('Preview'),
             'onclick' => 'window.open(\'' . Mage::helper("adminhtml")->
-            getUrl('custommaintenance/adminhtml_preview/index', array('storeId' => $this->getStoreId())) . '\')'
+            getUrl('custommaintenance/adminhtml_preview/index',
+                    array('storeId' => $this->getStoreId())) . '\')'
         ));
 
         return $button->toHtml();
