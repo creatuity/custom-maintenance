@@ -19,38 +19,38 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getLogo()
     {
-        $logo = Mage::helper('creatuity_custommaintenance/data')
+        $logo = Mage::helper('creatuity_custommaintenance')
                 ->getLogoUrl($this->_storeId);
         return $logo;
     }
 
     public function getBackgroundColor()
     {
-        $color = Mage::helper('creatuity_custommaintenance/data')
+        $color = Mage::helper('creatuity_custommaintenance')
                 ->getBackgroundColor($this->_storeId);
 
-        return (string) $color;
+        return $color;
     }
 
     public function getSideBackgroundColor()
     {
-        $color = Mage::helper('creatuity_custommaintenance/data')
+        $color = Mage::helper('creatuity_custommaintenance')
                 ->getSideColor($this->_storeId);
 
-        return (string) $color;
+        return $color;
     }
 
     public function getFooterAndHeaderBackgroundColor()
     {
-        $color = Mage::helper('creatuity_custommaintenance/data')
+        $color = Mage::helper('creatuity_custommaintenance')
                 ->getFooterAndHeaderColor($this->_storeId);
 
-        return (string) $color;
+        return $color;
     }
 
     public function getCopyright()
     {
-        $copyright = Mage::helper('creatuity_custommaintenance/data')
+        $copyright = Mage::helper('creatuity_custommaintenance')
                 ->getCopyright($this->_storeId);
 
         if (!$copyright) {
@@ -62,7 +62,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getTitle()
     {
-        $title = Mage::helper('creatuity_custommaintenance/data')
+        $title = Mage::helper('creatuity_custommaintenance')
                 ->getTitle($this->_storeId);
 
         if (!$title) {
@@ -74,7 +74,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getNotification()
     {
-        $notification = Mage::helper('creatuity_custommaintenance/data')
+        $notification = Mage::helper('creatuity_custommaintenance')
                 ->getNotification($this->_storeId);
 
         if (!$notification) {
@@ -86,7 +86,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getEmailContactAddress()
     {
-        $email = Mage::helper('creatuity_custommaintenance/data')
+        $email = Mage::helper('creatuity_custommaintenance')
                 ->getEmailContactAddress($this->_storeId);
 
         if (!$email) {
@@ -98,7 +98,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getPhoneNumber()
     {
-        $phoneNumber = Mage::helper('creatuity_custommaintenance/data')
+        $phoneNumber = Mage::helper('creatuity_custommaintenance')
                 ->getPhoneNumber($this->_storeId);
 
         if (!$phoneNumber) {
@@ -110,13 +110,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function areTooltipsEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->areTooltipsEnabled($this->_storeId);
     }
 
     public function getPhoneTooltip()
     {
-        $tooltip = Mage::helper('creatuity_custommaintenance/data')
+        $tooltip = Mage::helper('creatuity_custommaintenance')
                 ->getPhoneTooltip($this->_storeId);
 
         if (!$tooltip) {
@@ -128,7 +128,7 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function getEmailTooltip()
     {
-        $tooltip = Mage::helper('creatuity_custommaintenance/data')
+        $tooltip = Mage::helper('creatuity_custommaintenance')
                 ->getEmailTooltip($this->_storeId);
 
         if (!$tooltip) {
@@ -140,31 +140,31 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isCounterAnimationEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isCounterAnimationEnabled($this->_storeId);
     }
 
     public function isTitleAnimationEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isTitleAnimationEnabled($this->_storeId);
     }
 
-    public function RotatatingIconsEnabled()
+    public function rotatatingIconsEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
-                        ->RotatatingIconsEnabled($this->_storeId);
+        return Mage::helper('creatuity_custommaintenance')
+                        ->rotatatingIconsEnabled($this->_storeId);
     }
 
     public function isFacebookEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isFacebookEnabled($this->_storeId);
     }
 
     public function getFacebookPageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getFacebookPageUrl($this->_storeId);
 
         if (!$url) {
@@ -176,13 +176,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isGoogleEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isGoogleEnabled($this->_storeId);
     }
 
     public function getGooglePageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getGooglePageUrl($this->_storeId);
 
         if (!$url) {
@@ -194,13 +194,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isInstagramEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isInstagramEnabled($this->_storeId);
     }
 
     public function getInstagramPageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getInstagramPageUrl($this->_storeId);
 
         if (!$url) {
@@ -212,13 +212,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isPinterestEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isPinterestEnabled($this->_storeId);
     }
 
     public function getPinterestPageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getPinterestPageUrl($this->_storeId);
 
         if (!$url) {
@@ -230,13 +230,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isTwitterEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isTwitterEnabled($this->_storeId);
     }
 
     public function getTwitterPageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getTwitterPageUrl($this->_storeId);
 
         if (!$url) {
@@ -248,13 +248,13 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
 
     public function isYoutubeEnabled()
     {
-        return Mage::helper('creatuity_custommaintenance/data')
+        return Mage::helper('creatuity_custommaintenance')
                         ->isYoutubeEnabled($this->_storeId);
     }
 
     public function getYoutubePageUrl()
     {
-        $url = Mage::helper('creatuity_custommaintenance/data')
+        $url = Mage::helper('creatuity_custommaintenance')
                 ->getYoutubePageUrl($this->_storeId);
 
         if (!$url) {
@@ -262,6 +262,21 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         }
 
         return $url;
+    }
+
+    public function isGoogleAnalyticsAvailable()
+    {
+        return Mage::helper('googleanalytics')->isGoogleAnalyticsAvailable();
+    }
+
+    public function getGoogleAnalyticsAccountId()
+    {
+        return Mage::helper('googleanalytics')->getAccountId($this->_storeId);
+    }
+
+    public function getCustomGoogleTag()
+    {
+        return Mage::helper('creatuity_custommaintenance')->getCustomGoogleTag($this->_storeId);
     }
 
 }
