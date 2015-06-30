@@ -20,13 +20,8 @@
                     <div class="header">
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div class="main-container" <?php if ($this->getSideBackgroundColor()):?><?php echo "style=" . "\"background:" . $this->getSideBackgroundColor() . "\"" ?><?php endif;?>>
-                    <div class="main col1-layout" <?php if ($this->getBackgroundColor()):?><?php echo "style=" . "\"background:" . $this->getBackgroundColor() . "\"" ?><?php endif;?>>
-=======
                 <div class="main-container" <?php if ($this->getSideBackgroundColor()): ?><?php echo "style=" . "\"background:" . $this->getSideBackgroundColor() . "\"" ?><?php endif; ?>>
                     <div class="main col1-layout" <?php if ($this->getBackgroundColor()): ?><?php echo "style=" . "\"background:" . $this->getBackgroundColor() . "\"" ?><?php endif; ?>>
->>>>>>> bb499d73315c7391db068ada21442a10c50856ec
                         <div id="main" class="col-main">
                             <div class="logo-container">
                                 <?php if ($this->getLogo()): ?>
@@ -35,11 +30,11 @@
                             </div>
                             <?php if ($this->getTitle()): ?>
                                 <div class="page-title <?php if ($this->isTitleAnimationEnabled()): ?><?php echo ' top-down-animation' ?><?php endif; ?>">
-                                    <h1><?php echo $this->getTitle() ?></h1>
+                                    <h1 <?php if ($this->getTitleFontColor()): ?><?php echo "style=" . "\"color:" . $this->getTitleFontColor() . "\"" ?><?php endif; ?>><?php echo $this->getTitle() ?></h1>
                                 </div>
                             <?php endif; ?>
                             <?php if ($this->getNotification()): ?>
-                                <p><?php echo $this->getNotification() ?></p>
+                                <p <?php if ($this->getNotificationFontColor()): ?><?php echo "style=" . "\"color:" . $this->getNotificationFontColor() . "\"" ?><?php endif; ?>><?php echo $this->getNotification() ?></p>
                             <?php endif; ?>
                             <div class="counter<?php if ($this->isCounterAnimationEnabled()): ?><?php echo ' animation' ?><?php endif; ?>">
                                 <script src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) ?>errors/countdown-data.php" type="text/javascript"></script>
@@ -112,7 +107,7 @@
                             </ul>
                         </div>
                         <?php if ($this->getCopyright()): ?>
-                            <address class="copyright"><?php echo $this->getCopyright() ?></address>
+                            <address class="copyright" <?php if ($this->getCopyrightFontColor()): ?><?php echo "style=" . "\"color:" . $this->getCopyrightFontColor() . "\"" ?><?php endif; ?>><?php echo $this->getCopyright() ?></address>
                         <?php endif; ?>
                     </div>
                 </div>

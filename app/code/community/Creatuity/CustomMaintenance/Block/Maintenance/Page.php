@@ -61,6 +61,14 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         return $copyright;
     }
 
+    public function getCopyrightFontColor()
+    {
+        $color = Mage::helper('creatuity_custommaintenance')
+                ->getCopyrightFontColor($this->_storeId);
+
+        return $color;
+    }
+
     public function getTitle()
     {
         $title = Mage::helper('creatuity_custommaintenance')
@@ -73,6 +81,14 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         return $title;
     }
 
+    public function getTitleFontColor()
+    {
+        $color = Mage::helper('creatuity_custommaintenance')
+                ->getTitleFontColor($this->_storeId);
+
+        return $color;
+    }
+
     public function getNotification()
     {
         $notification = Mage::helper('creatuity_custommaintenance')
@@ -83,6 +99,14 @@ class Creatuity_CustomMaintenance_Block_Maintenance_Page extends Mage_Core_Block
         }
 
         return $notification;
+    }
+
+    public function getNotificationFontColor()
+    {
+        $color = Mage::helper('creatuity_custommaintenance')
+                ->getNotificationFontColor($this->_storeId);
+
+        return $color;
     }
 
     public function getEmailContactAddress()

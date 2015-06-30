@@ -28,14 +28,29 @@ class Creatuity_CustomMaintenance_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->getConfig('title', $storeId);
     }
 
+    public function getTitleFontColor($storeId = null)
+    {
+        return (string) $this->getConfig('title_font_color', $storeId);
+    }
+
     public function getNotification($storeId = null)
     {
         return $this->getConfig('notification', $storeId);
     }
 
+    public function getNotificationFontColor($storeId = null)
+    {
+        return (string) $this->getConfig('notification_font_color', $storeId);
+    }
+
     public function getCopyright($storeId = null)
     {
         return $this->getConfig('copyright', $storeId);
+    }
+
+    public function getCopyrightFontColor($storeId = null)
+    {
+        return (string) $this->getConfig('copyright_font_color', $storeId);
     }
 
     public function getEmailContactAddress($storeId = null)

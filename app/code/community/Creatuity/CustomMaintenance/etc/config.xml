@@ -91,6 +91,9 @@
                 <notification>The server is temporarily unable to service your request due to maintenance downtime or capacity problems. We will be back soon.</notification>
                 <title>We will be back soon</title>
                 <imagefield>logo.png</imagefield>
+                <title_font_color>#000000</title_font_color>
+                <notification_font_color>#000000</notification_font_color>
+                <copyright_font_color>#000000</copyright_font_color>
             </general>
         </creatuity_custommaintenance>
     </default>
